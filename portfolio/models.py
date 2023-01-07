@@ -9,7 +9,13 @@ class Portfolio(models.Model):
     def __str__(self):
         return self.title
     
-    
+class Services(models.Model):
+    name = models.CharField(max_length=200)
+    image = models.ImageField(upload_to='images/')
+    description = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.title
     
 class Education(models.Model):
     institution = models.CharField(max_length=200)
@@ -48,3 +54,12 @@ class Contact(models.Model):
         
         def __str__(self):
             return self.title
+        
+        
+class Blog(models.Model):
+    title = models.CharField(max_length=200)
+    image = models.ImageField(upload_to='images/')
+    description = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.title
