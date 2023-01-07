@@ -7,7 +7,7 @@ class Portfolio(models.Model):
     description = models.CharField(max_length=200)
 
     def __str__(self):
-        return self.title
+        return self.name
     
 class Services(models.Model):
     name = models.CharField(max_length=200)
@@ -23,7 +23,7 @@ class Education(models.Model):
     description = models.CharField(max_length=200)
 
     def __str__(self):
-        return self.title
+        return self.institution
 class Skills(models.Model):
     percentage=models.PositiveIntegerField(default=0)
 
@@ -36,7 +36,7 @@ class About(models.Model):
     description = models.CharField(max_length=200)
 
     def __str__(self):
-        return self.title
+        return self.name
     
 
     
@@ -47,7 +47,7 @@ class Contact(models.Model):
         description = models.CharField(max_length=200)
         
         def __str__(self):
-            return self.title
+            return self.email
         
         
 class Blog(models.Model):
