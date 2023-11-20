@@ -46,8 +46,17 @@
 					<h2 class="text-lg mb-4">{{abt.aboutme}}</h2>
 
 					<p class="mb-4">{{abt.description}}</p>
-					
-					
+					<h3 style="text-align: center;">Best Skilled On</h3>
+					<ul class="list-unstyled ">
+						<h3>Best Skilled On</h3>
+						<li><h5><i class="fab fa-python mr-3"></i>Python</h5></li>
+						<li><h5><i class="fas fa-laptop-code mr-3"></i>Fullstack web dev </h5></li>
+						<li><h5><i class="fas fa-database mr-3"></i>Database Admin</h5></li>
+						<li><h5><i class="fas fa-robot mr-3"></i>Machine Learning</h5></li>
+						<li><h5><i class="fas fa-chart-line mr-3"></i>Data Science</h5></li>
+						<li><h5><i class="fas fa-paint-brush mr-3"></i>Graphics Design</h5></li>
+						<li><h5><i class="fab fa-js mr-3"></i>JavaScript</h5></li>
+					</ul>
 
 					<a href="#services" class="btn btn-main mt-4 btn-rounded smoth-scroll">Services<i class="fa fa-angle-right ml-2"></i></a>
 				</div>
@@ -56,29 +65,7 @@
 		{% endfor %}
 	</div>
 </section>
-<section class="section-bottom experience">
-	<div class="container" >
-		<ul class="list-unstyled ">
-			<h3 style="text-align: center;">Best Skilled On</h3>
 
-			<div class="row">
-				<div class="row" style="text-align: center;">
-					{% for skill in skills %}
-					<div class="col-lg-6 col-md-6">
-						<div class="skill-bar mb-2 mb-lg-0">
-							<div class="mb-4 text-right">
-								<img src="{{ skill.icon.url }}" alt="{{ skill.name }}" class="imge-fluid" style="width: 100px; height: 100px;">
-							</div>
-						</div>
-					</div>
-					{% endfor %}
-				</div>
-			</div>
-			
-		</ul>
-		
-	</div>
-</section>
 <section class="section secondary-bg" id="services">
 	<div class="container">
 		<div class="row justify-content-center">
@@ -94,7 +81,6 @@
 			<div class="col-lg-4 col-md-6">
 				<div class="service-item">
 					<div class="d-flex align-items-center mb-4">
-						<i class="ti-microphone mr-3"></i>
 						<h4>{{ser.title}}</h4>
 					</div>
 					<p>{{ser.desription}}</p>
@@ -113,94 +99,31 @@
 		<div class="col-lg-6">
 			<div class="section-title text-center">
 				<h2 class="mb-4 text-lg">Work Portfolio</h2>
-				<p>Omnis est dolores commodi ullam tempora sequi asperiores ipsum autem ex aliquam. Voluptatibus unde</p>
+				<p>Vist My Recent Portfolio and keep your feedback</p>
 			</div>
 		</div>
 	</div>
 
-      <div class="col-12 text-center  mb-5">
-        <div class="btn-group btn-group-toggle " data-toggle="buttons">
-          <label class="btn active ">
-            <input type="radio" name="shuffle-filter" value="all" checked="checked" />All
-          </label>
-          <label class="btn ">
-            <input type="radio" name="shuffle-filter" value="design" />UI/UX Design
-          </label>
-          <label class="btn">
-            <input type="radio" name="shuffle-filter" value="branding" />BRANDING
-          </label>
-          <label class="btn">
-            <input type="radio" name="shuffle-filter" value="illustration" />ILLUSTRATION
-          </label>
-        </div>
-      </div>
+
 
     <div class="row shuffle-wrapper portfolio-gallery">
-      	<div class="col-lg-4 col-md-6 col-12 mb-4 shuffle-item" data-groups="[&quot;design&quot;,&quot;illustration&quot;]">
-	      	<div class="portfolio-item mb-4">
-				<img src="{% static 'assets/images/pc1.jpg' %}" alt="" class="img-fluid">
-				<div class="overlay-content">
-					<h5>Minimal Portfolio Theme</h5>
-					<a href="{%  static 'assets/images/pc1.jpg' %}" class="portfolio-image popup-gallery"><i class="ti-zoom-in"></i></a>	
-					<a href="portfolio-single.html"><i class="ti-link"></i></a>	
-				</div>
-			</div>
-      	</div>
+      	
 
-	      <div class="col-lg-4 col-md-6 col-12  mb-4 shuffle-item" data-groups="[&quot;branding&quot;]">
-	        <div class="portfolio-item mb-4">
-				<img src="{%   static 'assets/images/pc2.jpg'   %}" alt="" class="img-fluid">
-				<div class="overlay-content">
-					<h5>Minimal Portfolio Theme</h5>
-					<a href="{%  static 'assets/images/pc2.jpg' %}" class="portfolio-image popup-gallery"><i class="ti-zoom-in"></i></a>	
-					<a href="portfolio-single.html"><i class="ti-link"></i></a>	
-				</div>
-			</div>
-	      </div>
-
-      	<div class="col-lg-4 col-md-6 col-12  mb-4 shuffle-item" data-groups="[&quot;illustration&quot;]">
-       		<div class="portfolio-item mb-4">
-				<img src="{%  static 'assets/images/pc3.jpg' %}" alt="" class="img-fluid">
-				<div class="overlay-content">
-					<h5>Minimal Portfolio Theme</h5>
-					<a href="{%  static 'assets/images/pc3.jpg' %}" class="portfolio-image popup-gallery"><i class="ti-zoom-in"></i></a>	
-					<a href="portfolio-single.html"><i class="ti-link"></i></a>	
-				</div>
-			</div>
-      	</div>
-
-      	<div class="col-lg-4 col-md-6 col-12  mb-4 shuffle-item" data-groups="[&quot;design&quot;,&quot;branding&quot;]">
-        	<div class="portfolio-item mb-4">
-				<img src="{%  static 'assets/images/pc4.jpg' %}" alt="" class="img-fluid">
-				<div class="overlay-content">
-					<h5>Minimal Portfolio Theme</h5>
-					<a href="{%  static 'assets/images/pc4.jpg' %}" class="portfolio-image popup-gallery"><i class="ti-zoom-in"></i></a>	
-					<a href="portfolio-single.html"><i class="ti-link"></i></a>	
-				</div>
-			</div>
-      	</div>
-
-      	<div class="col-lg-4 col-md-6 col-12  mb-4 shuffle-item" data-groups="[&quot;illustration&quot;]">
-       		 <div class="portfolio-item mb-4">
-				<img src="{%  static 'assets/images/pc5.jpg' %}" alt="" class="img-fluid">
-				<div class="overlay-content">
-					<h5>Minimal Portfolio Theme</h5>
-					<a href="{%  static 'assets/images/pc1.jpg' %}" class="portfolio-image popup-gallery"><i class="ti-zoom-in"></i></a>	
-					<a href="portfolio-single.html"><i class="ti-link"></i></a>	
-				</div>
-			</div>
-      	</div>
-
+		{% for port in portfolios %}
       	<div class="col-lg-4 col-md-6 col-12  mb-4 shuffle-item" data-groups="[&quot;design&quot;]">
+			
        		<div class="portfolio-item mb-4">
-				<img src="{%  static 'assets/images/pc6.jpg' %}" alt="" class="img-fluid">
+				<img src="{{port.image_thumbnail.url}}" alt="" class="img-fluid">
 				<div class="overlay-content">
-					<h5>Minimal Portfolio Theme</h5>
-					<a href="{%  static 'assets/images/pc6.jpg' %}" class="portfolio-image popup-gallery"><i class="ti-zoom-in"></i></a>	
+					<h5>{{port.name}}</h5>
+					<a href="{{port.image_thumbnail.com}}" class="portfolio-image popup-gallery"><i class="ti-zoom-in"></i></a>	
 					<a href="portfolio-single.html"><i class="ti-link"></i></a>	
 				</div>
 			</div>
+		
       </div>
+	  {% endfor %}
+
     </div>
 
     <div class="row justify-content-center">
@@ -212,158 +135,30 @@
     </div>
   </div>
 </section>
-<!-- /portfolio -->
 <section class="section experience" id="skills">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-6">
-				<div class="title">
-					<h2>Work Experience</h2>
-				</div>
-			</div>	
-		</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="title">
+                    <h2>Education BackGround</h2>
+                </div>
+            </div>  
+        </div>
 
-		<div class="row">
-			<div class="col-lg-6">
-				<div class="content mb-4">
-					<h4>UX Designer</h4>
-					<span class="text-color">Googl inc[2000-2004]</span>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-				</div>
-				<div class="content mb-4">
-					<h4>Developer</h4>
-					<span class="text-color">Googl inc[2000-2004]</span>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-				</div>
-			</div>
-			<div class="col-lg-6">
-				<div class="content mb-4">
-					<h4>Marketer</h4>
-					<span class="text-color">Googl inc[2000-2004]</span>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-				</div>
-				<div class="content mb-4">
-					<h4>Marketer</h4>
-					<span class="text-color">Googl inc[2000-2004]</span>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-				</div>
-			</div>
-		</div>
-	</div>
+        <div class="row">
+            {% for edu in education %}
+            <div class="col-lg-6">
+                <div class="content mb-4">
+                    <h4>{{ edu.name }}</h4>
+                    <span class="text-color">{{ edu.timeframe }}</span>
+                    <p>{{ edu.description }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
 </section>
-<section class="counter-wrap section-bottom">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-3 col-md-6">
-				<div class="counter-item mb-5 mb-lg-0">
-					<i class="ti-user"></i>
-					<span class="counter">785</span>
-					<h5>Happy Clients</h5>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-6">
-				<div class="counter-item mb-5 mb-lg-0">
-					<i class="ti-thumb-up"></i>
-					<span class="counter">385</span>
-					<h5>project done</h5>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-6">
-				<div class="counter-item mb-5 mb-lg-0">
-					<i class="ti-face-smile"></i>
-					<span class="counter">845</span>
-					<h5>Cup of tea</h5>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-6">
-				<div class="counter-item">
-					<i class="ti-cup"></i>
-					<span class="counter">225</span>
-					<h5>awards won</h5>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<section class="section bg-light" id="team">
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-lg-6">
-				<div class="section-title text-center">
-					<h2 class="mb-4 text-lg">Our Team</h2>
-					<p>Omnis est dolores commodi ullam tempora sequi asperiores ipsum autem ex aliquam. Voluptatibus unde</p>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-lg-4 col-md-6">
-				<div class="team-block mb-5 mb-lg-0">
-					<img src="{% static 'assets/images/03-1.jpg' %}" alt="" class="img-fluid">
-					<div class="team-content">
-						<span class="mt-4 d-block">Founder</span>
-						<h4 class="mb-4">Richard William</h4>
-					</div>
 
-					<div class="overlay-content">
-						<span class="mt-4 d-block">Founder</span>
-						<h4 class="mb-4">Richard William</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, molestiae.</p>
-
-						<ul class="list-inline">
-							<li class="list-inline-item"><a href="#"><i class="ti-facebook"></i></a></li>
-							<li class="list-inline-item"><a href="#"><i class="ti-twitter"></i></a></li>
-							<li class="list-inline-item"><a href="#"><i class="ti-linkedin"></i></a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-lg-4 col-md-6">
-				<div class="team-block mb-5 mb-lg-0">
-					<img src="assets/images/02-2.jpg" alt="" class="img-fluid">
-					<div class="team-content">
-						<span class="mt-4 d-block">Founder</span>
-						<h4 class="mb-4">Richard William</h4>
-					</div>
-
-					<div class="overlay-content">
-						<span class="mt-4 d-block">Founder</span>
-						<h4 class="mb-4">Richard William</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, molestiae.</p>
-
-						<ul class="list-inline">
-							<li class="list-inline-item"><a href="#"><i class="ti-facebook"></i></a></li>
-							<li class="list-inline-item"><a href="#"><i class="ti-twitter"></i></a></li>
-							<li class="list-inline-item"><a href="#"><i class="ti-linkedin"></i></a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			
-			<div class="col-lg-4 col-md-6">
-				<div class="team-block">
-					<img src="assets/images/01-3.jpg" alt="" class="img-fluid">
-					<div class="team-content">
-						<span class="mt-4 d-block">Founder</span>
-						<h4 class="mb-4">Richard William</h4>
-					</div>
-
-					<div class="overlay-content">
-						<span class="mt-4 d-block">Founder</span>
-						<h4 class="mb-4">Richard William</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, molestiae.</p>
-
-						<ul class="list-inline">
-							<li class="list-inline-item"><a href="#"><i class="ti-facebook"></i></a></li>
-							<li class="list-inline-item"><a href="#"><i class="ti-twitter"></i></a></li>
-							<li class="list-inline-item"><a href="#"><i class="ti-linkedin"></i></a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
 <section class="cta">
 	<div class="container">
 		<div class="cta-wrap box-shadow">
@@ -383,67 +178,14 @@
 		</div>
 	</div>
 </section>
-<section class="section" id="blog">
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-lg-6">
-				<div class="section-title text-center">
-					<h2 class="mb-4 text-lg">News Feed</h2>
-					<p>Omnis est dolores commodi ullam tempora sequi asperiores ipsum autem ex aliquam. Voluptatibus unde</p>
-				</div>
-			</div>
-		</div>
 
-		<div class="row">
-			<div class="col-lg-4 col-md-6 ">
-				<div class="blog-item mb-5 mb-lg-0">
-					<img src="assets/images/blog1.jpg" alt="" class="img-fluid">
-					<div class="content mt-4">
-						<span class="timecount"><i class="ti-comments mr-3"></i>2 Comments</span>
-						<h4 class="mb-3 mt-2"><a href="blog-single.html">How To Build Honest UIs And Help Users Make Better </a></h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corrupti, suscipit minima debitis.</p>
-
-						<a href="blog-single.html" class="read-more">Read More <i class="ti-angle-right"></i></a>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-lg-4 col-md-6">
-				<div class="blog-item mb-5 mb-lg-0">
-					<img src="assets/images/blog2.jpg" alt="" class="img-fluid">
-					<div class="content mt-4">
-						<span class="timecount"><i class="ti-comments mr-3"></i>2 Comments</span>
-						<h4 class="mb-3"><a href="blog-single.html">Dating Apps: How To Improve Your Designs </a></h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corrupti, suscipit minima debitis.</p>
-
-						<a href="blog-single.html" class="read-more">Read More <i class="ti-angle-right"></i></a>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-lg-4 col-md-6">
-				<div class="blog-item mb-5 mb-lg-0">
-					<img src="assets/images/blog3.jpg" alt="" class="img-fluid">
-					<div class="content mt-4">
-						<span class="timecount"><i class="ti-comments mr-3"></i>2 Comments</span>
-						<h4 class="mb-3"><a href="blog-single.html">Meet Inclusive Front-End Design Patterns A New</a></h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corrupti, suscipit minima debitis.</p>
-
-						<a href="blog-single.html" class="read-more">Read More <i class="ti-angle-right"></i></a>
-					</div>
-				</div>
-			</div>
-
-		</div>
-	</div>
-</section>
 <section class="section" id="testimonial">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-5">
 				<div class="title">
 					<h2 class="mb-5 text-lg">Clients says</h2>
-					<p class="mb-5 ">Reiciendis, reprehenderit, quas impedit ea repudiandae non quibusdam nulla pariatur rerum numquam ipsum corporis, dignissimos aliquid, neque. Recusandae voluptas, inventore error amet.</p>
+					<p class="mb-5 ">What Clients Says About Me Please Have a Look and saying</p>
 					<a href="#contact" class="btn btn-main btn-rounded smoth-scroll">Get start<i class="fa fa-angle-right ml-2"></i></a>
 				</div>
 			</div>
@@ -451,67 +193,25 @@
 		
 			<div class="col-lg-7">
 				<div class="main-slider ">
+					{% for client in clients %}
 					<div class="testimonial-item d-flex align-items-center">
 						<div class="testimonial-content ">
 							<i class="ti-quote-left "></i>
-							<h4 class="mb-3 text-color mt-2">Code Quality!</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis architecto vel nesciunt accusamus quidem fugiat molestiae doloribus .</p>
+							<h4 class="mb-3 text-color mt-2">{{ client.title }}</h4>
+							<p>{{ client.description }}</p>
 							<div class="info">
-								<h5 class="mb-1">Khalid Farhan</h5>
-								<p class="text-sm">Themeturn</p>
+								<h5 class="mb-1">{{ client.name }}</h5>
+								<p class="text-sm">{{ client.subtitle }}</p>
 							</div>
 						</div>
 						<div class="testimonial-image">
-							<img src="assets/images/test-1.jpg" alt="" class="img-fluid">
+							<img src="{{ client.avatar_image.url }}" alt="" class="img-fluid" style="height: 100px; width: 100px;">
 						</div>
 					</div>
-
-					<div class="testimonial-item d-flex align-items-center">
-						<div class="testimonial-content ">
-							<i class="ti-quote-left "></i>
-							<h4 class="mb-3 text-color mt-2">Design!</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis architecto vel nesciunt accusamus quidem fugiat molestiae doloribus .</p>
-							<div class="info">
-								<h5 class="mb-1">Md.tanvir</h5>
-								<p class="text-sm">Themeturn</p>
-							</div>
-						</div>
-						<div class="testimonial-image">
-							<img src="assets/images/test-2.jpg" alt="" class="img-fluid">
-						</div>
-					</div>
-
-					<div class="testimonial-item d-flex align-items-center">
-						<div class="testimonial-content ">
-							<i class="ti-quote-left "></i>
-							<h4 class="mb-3 text-color mt-2">Development!</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis architecto vel nesciunt accusamus quidem fugiat molestiae doloribus .</p>
-							<div class="info">
-								<h5 class="mb-1">Rayhan Masud</h5>
-								<p class="text-sm">Themeturn</p>
-							</div>
-						</div>
-						<div class="testimonial-image">
-							<img src="assets/images/test-3.jpg" alt="" class="img-fluid">
-						</div>
-					</div>
-
-					<div class="testimonial-item d-flex align-items-center">
-						<div class="testimonial-content ">
-							<i class="ti-quote-left "></i>
-							<h4 class="mb-3 text-color mt-2">Development!</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis architecto vel nesciunt accusamus quidem fugiat molestiae doloribus .</p>
-							<div class="info">
-								<h5 class="mb-1">Jabed Hossain</h5>
-								<p class="text-sm">Themeturn</p>
-							</div>
-						</div>
-						<div class="testimonial-image">
-							<img src="assets/images/test-4.jpg" alt="" class="img-fluid">
-						</div>
-					</div>
+					{% endfor %}
 				</div>
 			</div>
+
 		</div>
 	</div>
 </section>
@@ -521,14 +221,16 @@
 			<div class="col-lg-6">
 				<div class="section-title text-center">
 					<h2 class="mb-4 text-lg">Let's Get started</h2>
-					<p>Omnis est dolores commodi ullam tempora sequi asperiores ipsum autem ex aliquam. Voluptatibus unde</p>
+					<p>Get to Contact Me and we Talk How to go about it</p>
 				</div>
 			</div>
 		</div>
 
 		<div class="row justify-content-center">
 			<div class="col-lg-8">
-				<form class="contact__form form-row contact-form" method="post" action="#" id="contactForm">
+				<form class="contact__form form-row contact-form" method="post" action="{%  url 'core:index' %}" id="contactForm">
+					{% csrf_token %}
+
 					 <div class="row">
                         <div class="col-12">
                             <div class="alert alert-success contact__msg" style="display: none" role="alert">
@@ -566,7 +268,7 @@
 
 					<div class="col-lg-12">
 						<div class="d-lg-flex justify-content-between mt-4">
-							<p>* Rest assured.We will not spam at your inbox.</p>
+							<p>* Promise i will not send adds.</p>
 							<input id="submit" name="submit" type="submit" class="btn btn-main btn-rounded" value="Send Message">
 						</div>
 					</div>
