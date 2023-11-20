@@ -60,67 +60,19 @@
 	<div class="container" >
 		<ul class="list-unstyled ">
 			<h3 style="text-align: center;">Best Skilled On</h3>
-			
-			<div class="row" style="text-align: center;">
-				<div class="col-lg-6 col-md-6">
-					<div class="skill-bar mb-2 mb-lg-0">
-						<div class="mb-4 text-right"><li><h5><i class="fab fa-python mr-3"></i>Python</h5></li></div>
-						
+
+			<div class="row">
+				<div class="row" style="text-align: center;">
+					{% for skill in skills %}
+					<div class="col-lg-6 col-md-6">
+						<div class="skill-bar mb-2 mb-lg-0">
+							<div class="mb-4 text-right">
+								<img src="{{ skill.icon.url }}" alt="{{ skill.name }}" class="imge-fluid" style="width: 100px; height: 100px;">
+							</div>
+						</div>
 					</div>
+					{% endfor %}
 				</div>
-				<div class="col-lg-6 col-md-6">
-					<div class="skill-bar mb-2 mb-lg-0">
-						<div class="mb-4 text-right"><li><h5><i class="fas fa-laptop-code mr-3"></i>Fullstack web dev </h5></li></div>
-	
-					</div>
-				</div>
-	
-				<div class="col-lg-6 col-md-6">
-					<div class="skill-bar mb-2 mb-lg-0">
-						<div class="mb-4 text-right">    <li><h5><i class="fas fa-paint-brush mr-3"></i>Graphics Design</h5></li></div>
-						
-					</div>
-				</div>
-	
-				<div class="col-lg-6 col-md-6">
-					<div class="skill-bar mb-2 mb-lg-0">
-						<div class="mb-4 text-right"><li><h5><i class="fas fa-database mr-3"></i>Database Admin</h5></li></div>
-	
-					</div>
-				</div>
-				<div class="col-lg-6 col-md-6">
-					<div class="skill-bar mb-4 mb-lg-0">
-						<div class=" mb-4 text-right"><li><h5><i class="fas fa-robot mr-3"></i>Machine Learning</h5></li></div>
-						
-					</div>
-				</div>
-				<div class="col-lg-6 col-md-6">
-					<div class="skill-bar mb-4 mb-lg-0">
-						<div class=" mb-4 text-right"><li><h5><i class="fas fa-chart-line mr-3"></i>Data Science</h5></li></div>
-					
-					</div>
-				</div>
-	
-				<div class="col-lg-6 col-md-6">
-					<div class="skill-bar mb-4 mb-lg-0">
-						<div class=" mb-4 text-right"><li><h5><i class="fas fa-brain mr-3"></i>Deep Learning</h5></li></div>
-				
-					</div>
-				</div>
-	
-				<div class="col-lg-6 col-md-6">
-					<div class="skill-bar mb-4 mb-lg-0">
-						<div class=" mb-4 text-right"><li><h5><i class="fas fa-chalkboard-teacher mr-3"></i>LLMS</h5></li></div>
-			
-					</div>
-				</div>
-				<div class="col-lg-6 col-md-6">
-					<div class="skill-bar mb-4 mb-lg-0">
-						<div class=" mb-4 text-right"><li><h5><i class="fab fa-js mr-3"></i>JavaScript</h5></li></div>
-			
-					</div>
-				</div>
-	
 			</div>
 			
 		</ul>
@@ -146,6 +98,7 @@
 						<h4>{{ser.title}}</h4>
 					</div>
 					<p>{{ser.desription}}</p>
+
 				</div>
 			</div>
 			{% endfor %}
